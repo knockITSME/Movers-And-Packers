@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>{% block title %}Packers and movers{% endblock %}</title>
+ {% load static %}
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.
+2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel=
+"stylesheet">
+ <!-- slick -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slickcarousel/1.9.0/slick-theme.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slickcarousel/1.9.0/slick.min.css">
+ <link rel="stylesheet" href="{% static 'css/default.css' %}">
+ <link rel="stylesheet" href="{% static 'css/about.css' %}">
+ <link rel="stylesheet" href="{% static 'css/index.css' %}">
+ <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+ <link rel="stylesheet" href="{% static 'css/getfreequote.css' %}">
+</head>
+<body>
+ 
+<!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-none d-lg-block">
+ <div class="topbar">
+ <div class="topbar__left">
+ <h4>Working 24 hours 7 days a week</h4>
+ </div>
+ <div class="topbar__right">
+ <i class="fa fa-phone"></i>
+ <span class="topbar__number mr-5">
+ <a href="tel:+6494461709">7400373840</a>
+ </span>
+ <i class="fa fa-envelope"></i>
+ <span class="topbar__number">
+ <a href = "mailto: abc@example.com">packersandmovers@gmail.com</a>
+ </span>
+ </div>
+</div>
+ </section>
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container d-flex">
+    <div class="logo nav__mine mr-auto">
+    <h1 class="textlight"><a href="index.html"><img src="{% static 'img/logo.png'%}" class="imgfluid first_logo" alt="">Packers & Movers</a></h1>
+    <a href="tel:123-456-7890" class="d-lg-none nav_phone"><i class="fa faphone" ></i> : 123-456-7890</a>
+    </div>
+    <nav class="nav-menu d-none d-lg-block ">
+    <ul>
+    <li class=""><a href="/">Home</a></li>
+    <li><a href="/aboutus">About</a></li>
+    <li class="drop-down"><a href="/services2">Services <i class="fa facaret-down"></i></a>
+    <ul>
+    <li><a href="/services2">Office Removals </a></li>
+    <li><a href="/services1">House Removals </a></li>
+    </ul>
+    </li>
+    <li><a href="/contact">Contact</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="/viewdetails">View Requests</a></li>
+    <li class="nav-menu d-none d-lg-block dropdown"> <a>Welcome {{request.user}} <i class="fa fa-caret-down"></i>
+    </a>
+    <ul>
+    <li><a href="/handlelogout">Logout </a></li>
+    </ul>
+    </li>
+    {% else %}
+    <!-- Button to trigger Login modal -->
+    
+    {% endif %}
+    <!-- <li><a href="contact.html">GET FREE QUOTE</a></li> -->
+    
+    </ul>
+    </nav><!-- .nav-menu -->
+    </div>
+    </header><!-- End Header -->
+   {% block body %}
+   {% endblock body %}
+   <!-- footer black -->
+<section id="footerBlack__container">
+    <div class="container">
+    <div class="footerblack__black">
+    <div class="footerBlack__container">
+    <button class="btn btnsuccess "><a href="/loginurl" >Admin login</a></button>
+    <div class="footerBlack__container__one mb-2 mr-6">
+    <a href=""><h5>Copyright © 2021 All right reserved || Design By CO5IB Te
+   am</h5></a>
+    </div>
+    <div class="footerBlack__container__three mb-2">
+    <i class="fa fa-map-marker"></i>
+    <a href="">Mumbai</a>
+    <i class="fa fa-map-marker"></i>
+    <a href="">India</a>
+    </div>
+    </div>
+    </div>
+    </div>
+   </section>
+   <!-- scroll on top -->
+   <a href="#" id="scroll" style="display: none;"><span></span></a>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.j
+   s"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   <script src="{% static 'js/sticky.js'%}"></script>
+   <script src="{% static 'js/index.js'%}"></script>
+   <!-- slick -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slickcarousel/1.9.0/slick.min.js"></script>
+    
+   </body>
+   </html>
+   

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block body %}
+<section id="about">
+ <div class="container">
+ <h2>CONTACT US</h2>
+ </div>
+</section>
+<div class="container my-5">
+ <div class="row">
+ <div class="col-md-4 text-center">
+ <div class="contact_one">
+ <div class="contact_one_img">
+ <img src="{% static 'img/twentysix.png' %}" class="imgfluid" alt="">
+ </div>
+ <div class="contact_one_content">
+ <p class="text-muted pt-3">OUR ADDRESS</p>
+ <address>
+ Mumbai, Maharashtra, India.
+ </address>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="col-md-4 text-center">
+ <div class="contact_one">
+ <div class="contact_one_img">
+ <img src="{% static 'img/twentyseven.png' %}" class="imgfluid" alt="">
+ </div>
+ <div class="contact_one_content">
+ <p class="text-muted pt-3">PHONE NO</p>
+ <a href="tel:123-456-7890">Call Us :9136231612</a>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="col-md-4 text-center">
+ <div class="contact_one">
+ <div class="contact_one_img">
+    <img src="{% static 'img/twentyeight.png' %}" class="imgfluid" alt="">
+</div>
+<div class="contact_one_content">
+<p class="text-muted pt-3">OUR EMAIL</p>
+<a href = "mailto: abc@example.com"> packersandmovers@gmail.com<
+/a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<!-- .contact_tw0 -->
+<div class="container my-5">
+<div class="container_two_bg">
+<div class="container_two_heading">
+<h2 class="mb-4">Get in Touch</h2>
+</div>
+<form action="#">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" placeholder="name" class="formcontrol" id="usr">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input type="email" class="formcontrol" placeholder="Enter email" id="email">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" placeholder="Contact Number" class="formcontrol" id="usr">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group form-date">
+<input type="date" id="birthday" name="birthday">
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <input type="text" placeholder="Address you're Moving From" class=
+   "form-control" id="usr">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <input type="text" placeholder="Address you're Moving To" class="f
+   orm-control" id="usr">
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div class="form-group">
+    <input type="text" placeholder="your current type of property" cla
+   ss="form-control" id="usr">
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <input type="text" placeholder="Do You Require Our Package Service
+   s" class="form-control" id="usr">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <input type="text" placeholder="Do You Require Our Package materia
+   ls" class="form-control" id="usr">
+    </div>
+    </div>
+    </div>
+    <div class="form-group">
+    <textarea class="formcontrol" placeholder="My Additional Notes" rows="5" id="comment"></textarea>
+    </div>
+    <input type="submit" class="contact_submit">
+    </form>
+   </div>
+   </div>
+   {% endblock body %}
+   

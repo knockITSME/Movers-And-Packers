@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block body %}
+ <div class="container mt-3">
+ 
+ <center> <h1>Get a Quote</h1></center>
+ </div>
+ <div class="container my-5">
+ <form class="post-form" method="post" action="/getquoteForm/">
+ {% csrf_token %}
+ <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+ <input name="cust_name" type="text" placeholder="name" class="formcontrol" id="usr">
+ </div>
+ </div>
+ <div class="col-md-6">
+ <div class="form-group">
+ <input name="cust_email" type="email" class="formcontrol" placeholder="Enter email" id="email">
+ </div>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+ <input name="cust_contact" type="text" placeholder="Contact Number" cl
+ass="form-control" id="usr">
+ </div>
+ </div>
+ <div class="col-md-6">
+ <div class="form-group form-date">
+ <input name="date" type="date" id="birthday" name="birthday">
+ </div>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+ <input name="cust_source" type="text" placeholder="Address you're Movi
+ng From" class="form-control" id = "usr">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input name="cust_destination" type="text" placeholder="Address you're
+Moving To" class="form-control"
+id="usr">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<input name="type_of_property" type="text" placeholder="your current t
+ype of property" class="form-control"
+id="usr">
+</div>
+</div>
+</div>
+<div class="form-group">
+<textarea name="cust_note" class="formcontrol" placeholder="My Additional Notes" rows="5"
+id="comment"></textarea>
+</div>
+<input type="submit" class="contact_submit">
+</form>
+</div>
+</div>
+{% endblock body %}
